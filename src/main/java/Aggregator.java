@@ -1,3 +1,4 @@
+import city.CityStrategy;
 import model.Provider;
 import model.SchoolStrategy;
 
@@ -10,11 +11,21 @@ public class Aggregator {
 //        Model model = new Model(view);
 //        Controller controller = new Controller(model);
 //        view.setController(controller);
-        SchoolStrategy strategy = new SchoolStrategy();
-        Provider provider = new Provider(strategy);
-        Controller controller = new Controller(provider);
-        strategy.getSchools("");
-        System.out.println(controller);
-        controller.scan();
+
+        /**
+         * Школы с сайта "Мел"
+         */
+//        SchoolStrategy strategy = new SchoolStrategy();
+//        Provider provider = new Provider(strategy);
+//        Controller controller = new Controller(provider);
+//        strategy.getSchools("");
+//        System.out.println(controller);
+//        controller.scan();
+
+        /**
+         * Москва — Сити
+         */
+        CityStrategy cityStrategy = new CityStrategy();
+        cityStrategy.getCityData();
     }
 }
